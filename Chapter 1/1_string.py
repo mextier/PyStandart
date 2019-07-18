@@ -4,6 +4,8 @@ t = string.Template("Name: $name    Price: $price   Location: $location")
 
 values = {"name": "Bottle", "price": 15.2, "location": "Floor 1"}
 print(t.substitute(values))
+values.pop("location")
+print(t.safe_substitute(values))
 
 print(string.printable)
 print(string.ascii_letters)
